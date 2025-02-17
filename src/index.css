@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Switzer";
+  src: url("./fonts/Switzer.woff2");
+}
+
+@font-face {
+  font-family: "General-Sans";
+  src: url("./fonts/General-Sans.woff2");
+}
+
+@theme {
+  --font-Switzer: "Switzer";
+  --font-General-Sans: "General-Sans";
+
+  --color-mint-cream: #eff6ee;
+  --color-cool-gray: #9197ae;
+  --color-prussian-blue: #273043;
+  --color-imperial-red: #f02d3a;
+  --color-rojo: #dd0426;
+}
