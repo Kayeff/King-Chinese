@@ -1,4 +1,9 @@
 import manchurian from "./assets/manchurian.webp";
+import paneer from "./assets/paneer-chilli.webp";
+import rice from "./assets/fried-rice.jpg";
+import noodles from "./assets/noodles.jpg";
+import soup from "./assets/manchow-soup.jpg";
+import bhel from "./assets/potato-chilli.jpg";
 
 export const menuItems = [
   {
@@ -37,6 +42,7 @@ export const menuItems = [
   {
     id: "item-2",
     name: "Paneer",
+    image: paneer,
     itemList: {
       base: [
         {
@@ -95,6 +101,7 @@ export const menuItems = [
   {
     id: "item-3",
     name: "Rice",
+    image: rice,
     itemList: {
       base: [
         {
@@ -153,6 +160,7 @@ export const menuItems = [
   {
     id: "item-4",
     name: "Soup",
+    image: soup,
     itemList: {
       base: [
         {
@@ -187,6 +195,7 @@ export const menuItems = [
   {
     id: "item-5",
     name: "Bhel",
+    image: bhel,
     itemList: {
       base: [
         {
@@ -217,6 +226,7 @@ export const menuItems = [
   {
     id: "item-6",
     name: "Noodles",
+    image: noodles,
     itemList: {
       base: [
         {

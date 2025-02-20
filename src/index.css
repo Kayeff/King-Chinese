@@ -6,17 +6,47 @@
 }
 
 @font-face {
-  font-family: "General-Sans";
-  src: url("./fonts/General-Sans.woff2");
+  font-family: "Gang of Three";
+  src: url("./fonts/go3v2.woff2");
+}
+
+.hero-image {
+  background: url("./assets/background.webp") no-repeat center center/cover;
+}
+
+.about-lantern {
+  background: url("./assets/lantern.webp") no-repeat center center/cover;
+}
+
+.manchurian {
+  background: url("./assets/manchurian-2.webp") no-repeat center center/cover;
+}
+
+.noodles {
+  background: url("./assets/noodles.webp") no-repeat center center/cover;
+}
+
+.paneer-chilli {
+  background: url("./assets/paneer-chilli-2.webp") no-repeat center center/cover;
+}
+
+.fried-rice {
+  background: url("./assets/fried-rice-1.jpg") no-repeat center center/cover;
+}
+
+.hero-text {
+  word-spacing: 3px;
 }
 
 @theme {
-  --font-Switzer: "Switzer";
-  --font-General-Sans: "General-Sans";
+  --font-switzer: "Switzer";
+  --font-gang-of-three: "Gang of Three";
 
   --color-mint-cream: #eff6ee;
-  --color-cool-gray: #9197ae;
-  --color-prussian-blue: #273043;
-  --color-imperial-red: #f02d3a;
-  --color-rojo: #dd0426;
+  --color-safety-orange: #ec7505;
+  --color-carrot-orange: #e89005;
+  --color-chilli-red: #e70e02;
+  --color-claret: #720026;
+  --color-scarlet: #f42b03;
+  --color-chocolate-cosmos: #4f000b;
 }
