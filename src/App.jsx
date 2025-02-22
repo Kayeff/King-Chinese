@@ -1,16 +1,15 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MenuDialog from "./components/MenuDialog";
 import Section from "./components/Section";
 import { lazy, Suspense, memo, useState, useEffect } from "react";
 
-// Lazy-loaded components for better performance
 const Hero = lazy(() => import("./components/Hero"));
 const Details = lazy(() => import("./components/Details"));
 const About = lazy(() => import("./components/About"));
 const Offers = lazy(() => import("./components/Offers"));
 const Contact = lazy(() => import("./components/Contact"));
 
-// Memoized Section to prevent unnecessary re-renders
 const MemoizedSection = memo(Section);
 
 export default function App() {
@@ -18,6 +17,9 @@ export default function App() {
 
   function showMenu() {
     setIsVisible(true);
+  }
+  function hideMenu() {
+    setIsVisible(false);
   }
 
   useEffect(() => {
@@ -35,7 +37,7 @@ export default function App() {
   return (
     <>
       <main className="w-full min-h-screen bg-black relative p-2 space-y-2">
-        {isVisible && <MenuDialog hideMenu={() => setIsVisible(false)} />}
+        {isVisible && <MenuDialog hideMenu={hideMenu} />}
         <Header />
         <Suspense fallback={<div>Loading Hero...</div>}>
           <MemoizedSection>
@@ -45,7 +47,7 @@ export default function App() {
 
         <Suspense fallback={<div>Loading Details...</div>}>
           <MemoizedSection>
-            <Details />
+            <Details showMenu={showMenu} />
           </MemoizedSection>
         </Suspense>
 
@@ -57,7 +59,7 @@ export default function App() {
 
         <Suspense fallback={<div>Loading Offers...</div>}>
           <MemoizedSection>
-            <Offers />
+            <Offers showMenu={showMenu} />
           </MemoizedSection>
         </Suspense>
 
@@ -66,6 +68,7 @@ export default function App() {
           <Contact />
         </MemoizedSection>
       </Suspense> */}
+        <Footer />
       </main>
     </>
   );
