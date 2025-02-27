@@ -10,9 +10,9 @@ function FooterLinks({ title, children }) {
 export default function Footer() {
   return (
     <footer className="w-full text-black bg-chilli-red space-y-10">
-      <div className="w-full grid grid-cols-2 p-4">
+      <div className="w-full grid grid-cols-1 laptop:grid-cols-2 gap-10 p-4">
         <div className="w-full grid grid-cols-2">
-          <FooterLinks title="Links">
+          <FooterLinks title="Our Links">
             <a
               href="#"
               className="font-switzer text-sm text-black font-medium hover:underline"
@@ -67,13 +67,13 @@ export default function Footer() {
         </div>
         <div className="w-full flex items-start justify-start flex-col space-y-2">
           <h1 className="font-semibold font-switzer uppercase">Mail us</h1>
-          <div className="w-full grid grid-cols-3 gap-1">
+          <div className="w-full grid max-mobile-l:grid-cols-2 gap-1 max-mobile-l:gap-2 mobile-l:grid-cols-3">
             <input
               type="email"
-              className="border border-black col-span-2 outline-none px-3 font-switzer"
+              className="border border-black col-span-2 outline-none p-3 font-switzer text-sm laptop:text-base"
               placeholder="someone@example.com"
             />
-            <button className="px-4 font-medium py-3 cursor-pointer border border-black text-chilli-red hover:bg-transparent hover:text-black bg-black duration-300 font-gang-of-three">
+            <button className="p-3 font-medium cursor-pointer border border-black text-chilli-red hover:bg-transparent hover:text-black bg-black duration-300 font-gang-of-three text-sm max-mobile-l:col-start-2 laptop:text-base">
               Send
             </button>
           </div>

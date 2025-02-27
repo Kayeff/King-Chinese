@@ -8,7 +8,9 @@ export default function Section({ children, className }) {
         className
       )}
     >
-      <div className="w-full grid grid-cols-2 gap-2">{children}</div>
+      <div className="w-full grid grid-cols-1 laptop:grid-cols-2 gap-2">
+        {children}
+      </div>
     </section>
   );
 }

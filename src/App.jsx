@@ -8,7 +8,6 @@ const Hero = lazy(() => import("./components/Hero"));
 const Details = lazy(() => import("./components/Details"));
 const About = lazy(() => import("./components/About"));
 const Offers = lazy(() => import("./components/Offers"));
-const Contact = lazy(() => import("./components/Contact"));
 
 const MemoizedSection = memo(Section);
 
@@ -63,11 +62,6 @@ export default function App() {
           </MemoizedSection>
         </Suspense>
 
-        {/* <Suspense fallback={<div>Loading Contact...</div>}>
-        <MemoizedSection>
-          <Contact />
-        </MemoizedSection>
-      </Suspense> */}
         <Footer />
       </main>
     </>

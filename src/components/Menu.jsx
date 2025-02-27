@@ -13,7 +13,7 @@ export default function Menu({ hideMenu }) {
   const selectedItem = menuItems.find((item) => item.id === activeItem);
 
   return (
-    <div className=" flex items-center justify-center flex-col space-y-10  p-10 bg-black relative">
+    <div className="flex items-center justify-center flex-col space-y-10 p-10 bg-black relative">
       <button
         onClick={hideMenu}
         className="absolute top-0 right-0 bg-chilli-red p-4 flex items-center justify-center cursor-pointer"

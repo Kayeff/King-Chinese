@@ -1,11 +1,14 @@
+import ButtonLink from "./ButtonLink";
+import SectionHeading from "./SectionHeading";
+import SectionPara from "./SectionPara";
+
 export default function About() {
   return (
     <>
-      <div className="border border-chilli-red text-chilli-red flex items-center justify-between flex-col p-8 px-14 space-y-4 h-[60vh]">
-        <h1 className="hero-text text-3xl uppercase font-medium font-gang-of-three">
-          About us
-        </h1>
-        <h1 className="hero-text font-switzer text-4xl tracking-tight text-center">
+      <div className="w-full h-[50vh] laptop:h-[60vh] border border-chilli-red about-lantern"></div>
+      <div className="w-full h-[50vh] laptop:h-[60vh] border border-chilli-red text-chilli-red flex items-center justify-between flex-col p-4 laptop:p-8 font-switzer">
+        <SectionHeading title="About us" />
+        <SectionPara>
           Founded by{" "}
           <span className="font-gang-of-three text-carrot-orange">
             Saiyed Intekhab Alam
@@ -15,23 +18,11 @@ export default function About() {
           and till date giving the locals the taste of good chinese. The aim of
           the restaurant is to provide meals at price affordable to villagers of
           Khergam.
-        </h1>
-        <div className="w-full flex items-center justify-center space-x-4">
-          <a
-            href="#"
-            className="px-7 font-medium py-3 border border-chilli-red bg-chilli-red font-switzer text-black cursor-pointer hover:bg-black hover:text-chilli-red duration-300"
-          >
-            Contact
-          </a>
-          <a
-            href="#"
-            className="px-7 font-medium py-3 border border-chilli-red bg-chilli-red font-switzer text-black cursor-pointer hover:bg-black hover:text-chilli-red duration-300"
-          >
-            Location
-          </a>
+        </SectionPara>
+        <div className="flex items-center justify-center space-x-4">
+          <ButtonLink href="#" text="Contact" />
         </div>
       </div>
-      <div className="w-full border border-chilli-red about-lantern"></div>
     </>
   );
 }
