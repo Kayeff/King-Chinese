@@ -4,10 +4,10 @@ import SectionHeading from "./SectionHeading";
 import SectionPara from "./SectionPara";
 
 const sigDishes = [
-  { id: "dish1", itemName: "Hong Kong Rice" },
-  { id: "dish2", itemName: "Manchurian Dry" },
-  { id: "dish3", itemName: "Hakka Noodles" },
-  { id: "dish4", itemName: "Paneer Chilli" },
+  { id: "dish1", itemName: "Manchurian Dry" },
+  { id: "dish2", itemName: "Paneer Chilli" },
+  { id: "dish3", itemName: "Manchurian Noodles" },
+  { id: "dish4", itemName: "Hong Kong Rice" },
 ];
 
 export default function Details({ showMenu }) {
