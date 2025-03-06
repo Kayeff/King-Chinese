@@ -1,0 +1,1 @@
+import{a as e,t as r}from"./index-C-Q3ZQcS.js";function o({title:t}){return e("h1",{className:"hero-text text-lg laptop:text-3xl uppercase font-medium font-gang-of-three",children:t})}function x({children:t,className:a}){return e("p",{className:r("hero-text text-xl tracking-tight text-center laptop:text-3xl",a),children:t})}export{o as S,x as a};
