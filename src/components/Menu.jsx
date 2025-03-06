@@ -16,7 +16,7 @@ export default function Menu({ hideMenu }) {
     <div className="flex items-center justify-center flex-col space-y-10 p-10 bg-black relative">
       <button
         onClick={hideMenu}
-        className="absolute top-0 right-0 bg-chilli-red p-4 flex items-center justify-center cursor-pointer"
+        className="absolute top-0 right-0 bg-chilli-red border border-transparent hover:border-chilli-red duration-300 p-4 flex items-center justify-center cursor-pointer hover:bg-black hover:text-chilli-red"
       >
         <RiCloseLargeFill />
       </button>
