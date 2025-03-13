@@ -3,14 +3,14 @@ import { twMerge } from "tailwind-merge";
 
 export default function Controls({
   menuDisplay,
-  displayList,
+  // displayList,
   displayGrid,
   resetActiveItem,
 }) {
   return (
     <div className="w-full flex items-center justify-between space-x-1 font-switzer">
       <div className="border border-chilli-red flex items-center justify-center text-chilli-red">
-        <button
+        {/* <button
           className={twMerge(
             "p-1 cursor-pointer hover:bg-chocolate-cosmos duration-300",
             menuDisplay === "list" ? "bg-chocolate-cosmos" : "text-chilli-red"
@@ -18,7 +18,7 @@ export default function Controls({
           onClick={displayList}
         >
           <RiListUnordered />
-        </button>
+        </button> */}
         <button
           className={twMerge(
             "p-1 cursor-pointer hover:bg-chocolate-cosmos duration-300",

@@ -2,8 +2,8 @@ import MenuGrid from "./MenuGrid";
 
 export default function GridSection({ selectedItem }) {
   return (
-    <div className="w-full flex items-center justify-center flex-col p-2 gap-2">
-      <div className="w-full grid grid-cols-5 gap-2">
+    <div className="w-full flex items-center justify-center flex-col gap-2">
+      <div className="w-full grid laptop:grid-cols-5 tablet:grid-cols-3 grid-cols-2 gap-2">
         {selectedItem.itemList.base.map(({ itemName, itemPrice }) => (
           <MenuGrid
             img={selectedItem.image}
@@ -18,7 +18,7 @@ export default function GridSection({ selectedItem }) {
           {selectedItem.name} Specials
         </h1>
       )}
-      <div className="w-full grid grid-cols-5 gap-2">
+      <div className="w-full grid grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-5 gap-2">
         {selectedItem.itemList.special?.map(({ itemName, itemPrice }) => (
           <MenuGrid
             img={selectedItem.image}
