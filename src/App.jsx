@@ -1,15 +1,12 @@
+import { lazy, Suspense, memo, useState, useEffect } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MenuDialog from "./components/MenuDialog";
-import Section from "./components/Section";
-import { lazy, Suspense, memo, useState, useEffect } from "react";
+import Hero from "./components/Hero";
 
-const Hero = lazy(() => import("./components/Hero"));
 const Details = lazy(() => import("./components/Details"));
 const About = lazy(() => import("./components/About"));
 const Offers = lazy(() => import("./components/Offers"));
-
-const MemoizedSection = memo(Section);
 
 export default function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,33 +32,15 @@ export default function App() {
 
   return (
     <>
-      <main className="w-full min-h-screen bg-black relative p-2 space-y-2">
+      <main className="w-full min-h-[100lvh] bg-black relative p-2 space-y-2">
         {isVisible && <MenuDialog hideMenu={hideMenu} />}
         <Header />
-        <Suspense fallback={<div>Loading Hero...</div>}>
-          <MemoizedSection>
-            <Hero showMenu={showMenu} />
-          </MemoizedSection>
-        </Suspense>
-
+        <Hero showMenu={showMenu} />
         <Suspense fallback={<div>Loading Details...</div>}>
-          <MemoizedSection>
-            <Details showMenu={showMenu} />
-          </MemoizedSection>
+          <Details showMenu={showMenu} />
+          <About />
+          <Offers showMenu={showMenu} />
         </Suspense>
-
-        <Suspense fallback={<div>Loading About...</div>}>
-          <MemoizedSection>
-            <About />
-          </MemoizedSection>
-        </Suspense>
-
-        <Suspense fallback={<div>Loading Offers...</div>}>
-          <MemoizedSection>
-            <Offers showMenu={showMenu} />
-          </MemoizedSection>
-        </Suspense>
-
         <Footer />
       </main>
     </>

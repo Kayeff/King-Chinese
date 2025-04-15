@@ -1,10 +1,11 @@
 import ButtonLink from "./ButtonLink";
+import Section from "./Section";
 import SectionHeading from "./SectionHeading";
 import SectionPara from "./SectionPara";
 
 export default function About() {
   return (
-    <>
+    <Section>
       <div className="w-full h-[50vh] laptop:h-[60vh] border border-chilli-red about-lantern"></div>
       <div className="w-full h-[50vh] laptop:h-[60vh] border border-chilli-red text-chilli-red flex items-center justify-between flex-col p-4 laptop:p-8 font-switzer">
         <SectionHeading title="About us" />
@@ -23,6 +24,6 @@ export default function About() {
           <ButtonLink href="#" text="Contact" />
         </div>
       </div>
-    </>
+    </Section>
   );
 }

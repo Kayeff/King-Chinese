@@ -1,5 +1,6 @@
 import bullet from "../assets/bullet.svg";
 import ButtonLink from "./ButtonLink";
+import Section from "./Section";
 import SectionHeading from "./SectionHeading";
 import SectionPara from "./SectionPara";
 
@@ -17,7 +18,7 @@ export default function Details({ showMenu }) {
     showMenu();
   }
   return (
-    <>
+    <Section>
       <div className="h-[50vh] laptop:h-[60vh] w-full border border-chilli-red text-chilli-red flex items-center justify-between flex-col p-8 font-switzer">
         <SectionHeading title="our signature dishes" />
         <div className="flex flex-col">
@@ -45,6 +46,6 @@ export default function Details({ showMenu }) {
           <div className="w-full h-full fried-rice"></div>
         </div>
       </div>
-    </>
+    </Section>
   );
 }

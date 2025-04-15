@@ -1,6 +1,7 @@
 import ButtonLink from "./ButtonLink";
 import SectionHeading from "./SectionHeading";
 import SectionPara from "./SectionPara";
+import Section from "./Section";
 
 export default function Hero({ showMenu }) {
   function handleClick(e) {
@@ -9,7 +10,7 @@ export default function Hero({ showMenu }) {
   }
 
   return (
-    <>
+    <Section>
       <div className="h-[50vh] laptop:h-[60vh] hero-image border border-chilli-red"></div>
       <div className="h-[50vh] laptop:h-[60vh] border border-chilli-red text-chilli-red flex items-center justify-between flex-col p-8 font-switzer">
         <SectionHeading title="What we offer" />
@@ -31,6 +32,6 @@ export default function Hero({ showMenu }) {
           <ButtonLink onClick={handleClick} href={"#"} text="Our Menu" />
         </div>
       </div>
-    </>
+    </Section>
   );
 }
