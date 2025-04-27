@@ -2,12 +2,14 @@
 
 @font-face {
   font-family: "Switzer";
-  src: url("./fonts/Switzer.woff2");
+  src: url("/fonts/Switzer.woff2") format("woff2");
+  font-style: swap;
 }
 
 @font-face {
   font-family: "Gang of Three";
-  src: url("./fonts/go3v2.woff2");
+  src: url("/fonts/go3v2.woff2") format("woff2");
+  font-style: swap;
 }
 
 .hero-image {
