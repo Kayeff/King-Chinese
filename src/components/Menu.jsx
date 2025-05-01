@@ -1,15 +1,14 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
 import { menuItems } from "../menu-items";
 import MenuSection from "./MenuSection";
 import Controls from "./Controls";
 import { twMerge } from "tailwind-merge";
 import { RiCloseLargeFill } from "@remixicon/react";
+import { motion } from "motion/react";
 
 export default function Menu({ hideMenu }) {
   const [activeItem, setActiveItem] = useState("");
   const [menuDisplay, setMenuDisplay] = useState("grid");
-
   const selectedItem = menuItems.find((item) => item.id === activeItem);
 
   return (

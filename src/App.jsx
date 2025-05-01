@@ -1,8 +1,9 @@
-import { lazy, Suspense, memo, useState, useEffect } from "react";
+import { lazy, useState, useEffect } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MenuDialog from "./components/MenuDialog";
 import Hero from "./components/Hero";
+import { useHeight } from "./hooks/useHeight";
 
 const Details = lazy(() => import("./components/Details"));
 const About = lazy(() => import("./components/About"));
@@ -10,13 +11,7 @@ const Offers = lazy(() => import("./components/Offers"));
 
 export default function App() {
   const [isVisible, setIsVisible] = useState(false);
-
-  function showMenu() {
-    setIsVisible(true);
-  }
-  function hideMenu() {
-    setIsVisible(false);
-  }
+  useHeight();
 
   useEffect(() => {
     if (isVisible) {
@@ -31,11 +26,11 @@ export default function App() {
   }, [isVisible]);
 
   return (
-    <main className="w-full min-h-[100dvh] bg-black relative p-2 space-y-2">
-      {isVisible && <MenuDialog hideMenu={hideMenu} />}
+    <main className="w-full h-screen-fixed bg-black relative p-2 space-y-2">
+      <MenuDialog isVisible={isVisible} hideMenu={() => setIsVisible(false)} />
       <Header />
-      <Hero showMenu={showMenu} />
-      <Details showMenu={showMenu} />
+      <Hero showMenu={() => setIsVisible(true)} />
+      <Details showMenu={() => setIsVisible(true)} />
       <About />
       <Footer />
     </main>

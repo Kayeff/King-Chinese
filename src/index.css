@@ -12,6 +12,12 @@
   font-style: swap;
 }
 
+@layer utilities {
+  .h-screen-fixed {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
 .hero-image {
   background: url("./assets/background.webp") no-repeat center center/cover;
 }
@@ -48,8 +54,6 @@
   --color-safety-orange: #ec7505;
   --color-carrot-orange: #e89005;
   --color-chilli-red: #e70e02;
-  --color-claret: #720026;
-  --color-scarlet: #f42b03;
   --color-chocolate-cosmos: #4f000b;
 
   --breakpoint-*: initial;
