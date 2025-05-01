@@ -5,7 +5,6 @@ import Section from "./Section";
 
 export default function Hero({ showMenu }) {
   function handleClick(e) {
-    e.preventDefault();
     showMenu();
   }
 
@@ -15,7 +14,7 @@ export default function Hero({ showMenu }) {
       <div className="h-[50vh] laptop:h-[60vh] border border-chilli-red text-chilli-red flex items-center justify-between flex-col p-8 font-switzer">
         <SectionHeading title="What we offer" />
         <SectionPara>
-          Our menu has classic dishes like{" "}
+          Our menu has classic chinese dishes like{" "}
           <span className="font-gang-of-three text-carrot-orange">
             Fried Rice
           </span>

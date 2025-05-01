@@ -31,18 +31,13 @@ export default function App() {
   }, [isVisible]);
 
   return (
-    <>
-      <main className="w-full min-h-[100lvh] bg-black relative p-2 space-y-2">
-        {isVisible && <MenuDialog hideMenu={hideMenu} />}
-        <Header />
-        <Hero showMenu={showMenu} />
-        <Suspense fallback={<div>Loading Details...</div>}>
-          <Details showMenu={showMenu} />
-          <About />
-          <Offers showMenu={showMenu} />
-        </Suspense>
-        <Footer />
-      </main>
-    </>
+    <main className="w-full min-h-[100dvh] bg-black relative p-2 space-y-2">
+      {isVisible && <MenuDialog hideMenu={hideMenu} />}
+      <Header />
+      <Hero showMenu={showMenu} />
+      <Details showMenu={showMenu} />
+      <About />
+      <Footer />
+    </main>
   );
 }
