@@ -28,7 +28,7 @@ export default function Hero({ showMenu }) {
           friendly price.
         </SectionPara>
         <div className="">
-          <ButtonLink onClick={handleClick} href={"#"} text="Our Menu" />
+          <ButtonLink onClick={handleClick} text="Our Menu" />
         </div>
       </div>
     </Section>
