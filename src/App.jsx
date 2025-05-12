@@ -26,7 +26,7 @@ export default function App() {
   }, [isVisible]);
 
   return (
-    <main className="w-full h-screen-fixed bg-black relative p-2 space-y-2">
+    <main className="w-full min-h-[100svh] bg-black relative p-2 space-y-2">
       <MenuDialog isVisible={isVisible} hideMenu={() => setIsVisible(false)} />
       <Header />
       <Hero showMenu={() => setIsVisible(true)} />
