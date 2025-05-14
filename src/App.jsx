@@ -3,8 +3,9 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MenuDialog from "./components/MenuDialog";
 import Hero from "./components/Hero";
+import Details from "./components/Details";
 
-const Details = lazy(() => import("./components/Details"));
+const BestSellers = lazy(() => import("./components/BestSellers"));
 const About = lazy(() => import("./components/About"));
 const Location = lazy(() => import("./components/Location"));
 
@@ -29,7 +30,8 @@ export default function App() {
       <Header />
       <section className="w-full flex flex-col gap-2 p-2">
         <Hero showMenu={() => setIsVisible(true)} />
-        <Details showMenu={() => setIsVisible(true)} />
+        <Details />
+        <BestSellers showMenu={() => setIsVisible(true)} />
         <About />
         <Location />
       </section>

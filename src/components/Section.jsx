@@ -4,7 +4,7 @@ import SectionPara from "./SectionPara";
 
 function Content({ heading, description, buttonText, handleClick }) {
   return (
-    <div className="text-chilli-red flex items-center justify-between gap-10 flex-col p-8 font-switzer h-[50vh] laptop:h-[60vh] rounded-lg border border-chilli-red">
+    <div className="text-chilli-red flex items-center justify-between flex-col gap-4 p-8 font-switzer laptop:h-[60vh] rounded-lg border border-chilli-red">
       <SectionHeading title={heading} />
       <SectionPara text={description} />
       <div className="flex items-center justify-center">

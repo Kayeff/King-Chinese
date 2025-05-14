@@ -12,8 +12,8 @@
   font-style: swap;
 }
 
-.about-lantern {
-  background: url("./assets/lantern.webp") no-repeat center center/cover;
+.pattern {
+  background: url("./assets/pattern.avif") no-repeat center center/cover;
 }
 
 .manchurian {
