@@ -1,6 +1,6 @@
 import manchurian from "./assets/manchurian.webp";
 import paneer from "./assets/paneer-chilli.webp";
-import rice from "./assets/fried-rice.jpg";
+import rice from "./assets/fried-rice.webp";
 import noodles from "./assets/noodles.jpg";
 import soup from "./assets/manchow-soup.jpg";
 import bhel from "./assets/potato-chilli.jpg";

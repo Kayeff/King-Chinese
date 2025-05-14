@@ -1,10 +1,11 @@
 import Section from "./Section";
-import about from "../assets/lantern.webp";
+import about from "../assets/owner.webp";
 
 export default function About() {
   return (
     <Section
       twist
+      to="contact"
       heading="About us"
       buttonText="Contact us"
       description={

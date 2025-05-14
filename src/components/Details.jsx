@@ -1,5 +1,3 @@
-import lantern from "../assets/lantern.webp";
-
 export default function Details() {
   return (
     <div className="w-full h-[30vh] grid grid-cols-1 laptop:grid-cols-2 gap-2">

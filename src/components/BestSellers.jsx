@@ -7,9 +7,10 @@ const sigDishes = [
   { id: "dish4", itemName: "Hong Kong Rice" },
 ];
 
-export default function BestSellers({ showMenu }) {
+export default function BestSellers() {
   return (
     <Section
+      to="menu"
       images={
         <div className="h-[50vh] laptop:h-[60vh] w-full flex items-center justify-center border border-chilli-red rounded-lg">
           <div className="w-full h-full grid grid-cols-1 gap-1 tablet:grid-cols-2 rounded-lg overflow-hidden">
@@ -32,7 +33,6 @@ export default function BestSellers({ showMenu }) {
         </ul>
       }
       buttonText="Explore Menu"
-      onClick={showMenu}
     />
   );
 }

@@ -1,13 +1,13 @@
 import Section from "./Section";
 import hero from "../assets/background.webp";
 
-export default function Hero({ showMenu }) {
+export default function Hero() {
   return (
     <Section
       twist
+      to="menu"
       heading="What we offer"
       buttonText="Our Menu"
-      handleClick={showMenu}
       description={
         <>
           Our menu has classic chinese dishes like{" "}
