@@ -12,7 +12,7 @@ export default function Menu({ hideMenu }) {
   const selectedItem = menuItems.find((item) => item.id === activeItem);
 
   return (
-    <div className="w-full flex items-center justify-center flex-col space-y-10 bg-black relative p-4">
+    <div className="w-full flex items-center justify-center flex-col gap-10 bg-black relative p-4">
       <button
         onClick={hideMenu}
         className="absolute top-4 right-4 bg-chilli-red border border-transparent hover:border-chilli-red duration-300 p-2 laptop:p-4 flex items-center justify-center cursor-pointer hover:bg-black hover:text-chilli-red"

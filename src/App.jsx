@@ -3,15 +3,13 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MenuDialog from "./components/MenuDialog";
 import Hero from "./components/Hero";
-import { useHeight } from "./hooks/useHeight";
 
 const Details = lazy(() => import("./components/Details"));
 const About = lazy(() => import("./components/About"));
-const Offers = lazy(() => import("./components/Offers"));
+const Location = lazy(() => import("./components/Location"));
 
 export default function App() {
   const [isVisible, setIsVisible] = useState(false);
-  useHeight();
 
   useEffect(() => {
     if (isVisible) {
@@ -26,12 +24,15 @@ export default function App() {
   }, [isVisible]);
 
   return (
-    <main className="w-full min-h-[100svh] bg-black relative p-2 space-y-2">
+    <main className="w-full min-h-[100svh] bg-black relative gap-2 font-switzer">
       <MenuDialog isVisible={isVisible} hideMenu={() => setIsVisible(false)} />
       <Header />
-      <Hero showMenu={() => setIsVisible(true)} />
-      <Details showMenu={() => setIsVisible(true)} />
-      <About />
+      <section className="w-full flex flex-col gap-2 p-2">
+        <Hero showMenu={() => setIsVisible(true)} />
+        <Details showMenu={() => setIsVisible(true)} />
+        <About />
+        <Location />
+      </section>
       <Footer />
     </main>
   );

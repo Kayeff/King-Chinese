@@ -1,8 +1,4 @@
-import bullet from "../assets/bullet.svg";
-import ButtonLink from "./ButtonLink";
 import Section from "./Section";
-import SectionHeading from "./SectionHeading";
-import SectionPara from "./SectionPara";
 
 const sigDishes = [
   { id: "dish1", itemName: "Manchurian Dry" },
@@ -12,40 +8,31 @@ const sigDishes = [
 ];
 
 export default function Details({ showMenu }) {
-  function handleClick(event) {
-    event.preventDefault();
-
-    showMenu();
-  }
   return (
-    <Section>
-      <div className="h-[50vh] laptop:h-[60vh] w-full border border-chilli-red text-chilli-red flex items-center justify-between flex-col p-8 font-switzer">
-        <SectionHeading title="our signature dishes" />
-        <div className="flex flex-col">
-          {sigDishes.map((item) => (
-            <SectionPara
-              className="flex items-center justify-start space-x-2"
-              key={item.id}
-            >
-              <span>
-                <img className="h-7" src={bullet} alt="" />
-              </span>
+    <Section
+      images={
+        <div className="h-[50vh] laptop:h-[60vh] w-full flex items-center justify-center border border-chilli-red rounded-lg">
+          <div className="w-full h-full grid grid-cols-1 gap-1 tablet:grid-cols-2 rounded-lg overflow-hidden">
+            <div className="w-full h-full manchurian" />
+            <div className="w-full h-full paneer-chilli" />
+            <div className="w-full h-full noodles" />
+            <div className="w-full h-full fried-rice" />
+          </div>
+        </div>
+      }
+      twist={false}
+      heading="our signature dishes"
+      description={
+        <ul className="flex items-center justify-center flex-col">
+          {sigDishes.map((item, index) => (
+            <li className="flex items-center justify-start gap-2" key={item.id}>
               <span>{item.itemName}</span>
-            </SectionPara>
+            </li>
           ))}
-        </div>
-        <div>
-          <ButtonLink onClick={handleClick} text="Explore Menu" />
-        </div>
-      </div>
-      <div className="h-[50vh] laptop:h-[60vh] w-full flex items-center justify-center border border-chilli-red">
-        <div className="w-full h-full grid grid-cols-1 gap-1 tablet:grid-cols-2">
-          <div className="w-full h-full manchurian"></div>
-          <div className="w-full h-full paneer-chilli"></div>
-          <div className="w-full h-full noodles"></div>
-          <div className="w-full h-full fried-rice"></div>
-        </div>
-      </div>
-    </Section>
+        </ul>
+      }
+      buttonText="Explore Menu"
+      onClick={showMenu}
+    />
   );
 }

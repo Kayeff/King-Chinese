@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Switzer";
-  src: url("/fonts/Switzer.woff2") format("woff2");
+  font-family: "Inter";
+  src: url("/fonts/inter.woff2") format("woff2");
   font-style: swap;
 }
 
@@ -10,16 +10,6 @@
   font-family: "Gang of Three";
   src: url("/fonts/go3v2.woff2") format("woff2");
   font-style: swap;
-}
-
-@layer utilities {
-  .h-screen-fixed {
-    height: calc(var(--vh, 1vh) * 100);
-  }
-}
-
-.hero-image {
-  background: url("./assets/background.webp") no-repeat center center/cover;
 }
 
 .about-lantern {
@@ -47,7 +37,7 @@
 }
 
 @theme {
-  --font-switzer: "Switzer";
+  --font-switzer: "Inter";
   --font-gang-of-three: "Gang of Three";
 
   --color-mint-cream: #eff6ee;

@@ -5,7 +5,7 @@ export default function MenuDialog({ isVisible, hideMenu }) {
   return (
     <>
       {isVisible && (
-        <div className="min-h-screen w-full fixed top-0 left-0 flex items-center justify-center z-50 bg-[rgba(0,0,0,0.6)]">
+        <div className="h-screen w-full fixed top-0 left-0 flex items-center justify-center z-50 bg-[rgba(0,0,0,0.6)]">
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
