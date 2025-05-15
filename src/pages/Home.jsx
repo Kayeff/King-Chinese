@@ -1,8 +1,10 @@
-import BestSellers from "../components/BestSellers";
-import Details from "../components/Details";
+import { lazy } from "react";
 import Hero from "../components/Hero";
-import About from "../components/About";
-import Location from "../components/Location";
+import Details from "../components/Details";
+
+const BestSellers = lazy(() => import("../components/BestSellers"));
+const About = lazy(() => import("../components/About"));
+const Location = lazy(() => import("../components/Location"));
 
 export default function Home() {
   return (

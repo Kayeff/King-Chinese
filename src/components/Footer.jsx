@@ -6,9 +6,9 @@ export default function Footer() {
       <div className="w-full flex items-center justify-start flex-col cursor-default">
         <Heading />
       </div>
-      <div className="w-full flex items-center justify-between p-5">
-        <h1 className="tracking-tighter">&copy; King Chinese 2025</h1>
-        <h1 className="tracking-tighter">
+      <div className="w-full flex items-center justify-between p-2 laptop:p-5">
+        <h1 className="tracking-tighter text-sm">&copy; King Chinese 2025</h1>
+        <h1 className="tracking-tighter text-sm">
           Made by -{" "}
           <a
             className="hover:underline"

@@ -25,7 +25,7 @@ export default function Hero() {
         </>
       }
       images={
-        <div className="w-full flex items-center justify-center h-[50vh] laptop:h-[60vh] border border-chilli-red rounded-lg">
+        <div className="w-full flex items-center justify-center h-[50vh] laptop:h-[60vh] border border-chocolate-cosmos rounded-lg">
           <img
             className="w-full object-cover h-full rounded-lg "
             src={hero}

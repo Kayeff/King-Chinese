@@ -11,7 +11,7 @@ export default function SectionContent({
   isLink,
 }) {
   return (
-    <div className="text-chilli-red flex items-center justify-between flex-col gap-4 p-8  laptop:h-[60vh] rounded-lg border border-chilli-red">
+    <div className="text-chilli-red flex items-center justify-between flex-col gap-4 p-8  laptop:h-[60vh] rounded-lg border border-chocolate-cosmos">
       <SectionHeading title={heading} />
       <SectionPara text={description} />
       {to && buttonText && (

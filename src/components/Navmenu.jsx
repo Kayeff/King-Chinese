@@ -13,7 +13,9 @@ export default function Navmenu({ isVisible, closeMenu }) {
 
   function navigateTo(path) {
     closeMenu();
-    setTimeout(() => navigate(path), 400);
+    setTimeout(() => {
+      navigate(path);
+    }, 400);
   }
 
   return (
@@ -21,9 +23,10 @@ export default function Navmenu({ isVisible, closeMenu }) {
       initial={{ top: "-70vh" }}
       animate={{ top: 0 }}
       exit={{ top: "-70vh" }}
-      className="fixed left-1/2 -translate-x-1/2 w-[95%] h-[70%] bg-chilli-red rounded-b-xl z-50"
+      className="fixed left-1/2 -translate-x-1/2 w-full laptop:w-[95%] h-[40%] laptop:h-[70%] bg-chilli-red rounded-b-xl z-50"
     >
-      <div className="w-full flex items-center justify-end">
+      <div className="w-full flex items-center justify-between">
+        <h1 className="px-10 tracking-tighter">Navigation</h1>
         <button
           onClick={closeMenu}
           className="bg-black cursor-pointer flex items-center justify-center p-5"
@@ -31,23 +34,23 @@ export default function Navmenu({ isVisible, closeMenu }) {
           <RiCloseLargeLine size={40} className="text-chilli-red" />
         </button>
       </div>
-      <ul className="w-full flex flex-col p-10 font-inter">
+      <ul className="w-full flex flex-col p-3 laptop:p-10 font-inter">
         {links.map((link, index) => (
           <li
             key={link.text}
-            className="border-b border-black/20 flex items-center justify-between overflow-y-hidden"
+            className="border-b border-black/20 flex items-center justify-between  overflow-y-hidden"
           >
             <button
               onClick={() => navigateTo(link.path)}
-              className="text-9xl tracking-tighter cursor-pointer px-2"
+              className="text-[15vw] leading-[15vw] laptop:text-9xl laptop:leading-[8rem] tracking-tighter cursor-pointer px-2"
             >
               <motion.p
                 initial={{ y: 100 }}
                 animate={{ y: isVisible ? 0 : 100 }}
                 transition={{
                   duration: 0.7,
-                  ease: "easeOut",
-                  delay: 0.07 * index,
+                  ease: "easeInOut",
+                  delay: 0.1 * index,
                 }}
               >
                 {link.text}

@@ -13,7 +13,7 @@ export default function MenuSection({ selectedItem }) {
           className="w-full flex items-center justify-center flex-col"
         >
           <div className="w-full flex items-center justify-center flex-col gap-2">
-            <div className="w-full grid laptop:grid-cols-6 tablet:grid-cols-3 grid-cols-2 gap-2">
+            <div className="w-full grid laptop:grid-cols-4 laptop-l:grid-cols-6 tablet:grid-cols-3 mobile-l:grid-cols-2 grid-cols-1 gap-2">
               {selectedItem.itemList.base.map(({ itemName, itemPrice }) => (
                 <MenuItem
                   key={itemName}
@@ -28,7 +28,7 @@ export default function MenuSection({ selectedItem }) {
                 {selectedItem.name} Specials
               </h1>
             )}
-            <div className="w-full grid grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-6 gap-2">
+            <div className="w-full grid grid-cols-1 mobile-l:grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 laptop-l:grid-cols-6 gap-2">
               {selectedItem.itemList.special?.map(({ itemName, itemPrice }) => (
                 <MenuItem
                   key={itemName}
@@ -42,7 +42,7 @@ export default function MenuSection({ selectedItem }) {
         </motion.div>
       )}
       {!selectedItem && (
-        <p className="w-full flex items-center justify-center tracking-tighter text-chilli-red p-5">
+        <p className="w-full flex items-center justify-center tracking-tight text-chilli-red p-5">
           Please select an item.
         </p>
       )}
