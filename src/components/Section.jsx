@@ -1,23 +1,4 @@
-import AnchorLink from "./AnchorLink";
-import Button from "./Button";
-import SectionHeading from "./SectionHeading";
-import SectionPara from "./SectionPara";
-
-function Content({ heading, description, buttonText, to, isLink }) {
-  return (
-    <div className="text-chilli-red flex items-center justify-between flex-col gap-4 p-8 font-switzer laptop:h-[60vh] rounded-lg border border-chilli-red">
-      <SectionHeading title={heading} />
-      <SectionPara text={description} />
-      <div className="flex items-center justify-center">
-        {isLink ? (
-          <AnchorLink text={buttonText} href={to} />
-        ) : (
-          <Button to={to} text={buttonText} />
-        )}
-      </div>
-    </div>
-  );
-}
+import SectionContent from "../components/SectionContent";
 
 export default function Section({
   images,
@@ -33,7 +14,7 @@ export default function Section({
       {twist ? (
         <>
           {images}
-          <Content
+          <SectionContent
             to={to}
             isLink={isLink}
             heading={heading}
@@ -43,7 +24,7 @@ export default function Section({
         </>
       ) : (
         <>
-          <Content
+          <SectionContent
             to={to}
             isLink={isLink}
             heading={heading}

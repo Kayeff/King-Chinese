@@ -8,15 +8,13 @@ export default function ItemsBar({ onClick, menuItems, activeItem }) {
           key={item.id}
           onClick={() => onClick(item.id)}
           className={twMerge(
-            "border border-chilli-red text-mint-cream p-2 flex items-center justify-center duration-300 cursor-pointer",
+            "border border-chocolate-cosmos p-4 flex items-center justify-center duration-300 cursor-pointer text-xl font-medium tracking-tighter text-chilli-red rounded-lg",
             activeItem === item.id
-              ? "bg-chocolate-cosmos"
+              ? "bg-chilli-red text-black"
               : "hover:bg-chocolate-cosmos"
           )}
         >
-          <h1 className="text-lg font-medium tracking-tighter text-chilli-red font-switzer">
-            {item.name}
-          </h1>
+          {item.name}
         </button>
       ))}
     </div>

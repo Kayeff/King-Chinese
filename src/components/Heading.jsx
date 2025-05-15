@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 export default function Heading({ sentence = "King Chinese", className }) {
   const headingRef = useRef(null);
   const inView = useInView(headingRef);
+
   const text = sentence.split(" ").map((word, wordIndex) => (
     <span key={word}>
       {word.split("").map((letter, index) => (
