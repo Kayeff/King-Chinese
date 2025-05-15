@@ -9,18 +9,21 @@ import Home from "./pages/Home.jsx";
 import MenuPage from "./pages/MenuPage.jsx";
 import Contact from "./pages/Contact.jsx";
 
-const routes = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: "menu", element: <MenuPage /> },
-      { path: "contact", element: <Contact /> },
-    ],
-  },
-]);
+const routes = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <ErrorPage />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "menu", element: <MenuPage /> },
+        { path: "contact", element: <Contact /> },
+      ],
+    },
+  ],
+  { basename: "/King-Chinese/" }
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
