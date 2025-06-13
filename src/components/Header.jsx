@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import Heading from "./Heading";
 import Navmenu from "./Navmenu";
 import { AnimatePresence } from "motion/react";
 import Overlay from "./Overlay";
 
-export default function Header() {
+const Header = memo(function Header() {
   const [isVisible, setIsVisible] = useState(false);
 
   function toggleMenu() {
@@ -30,4 +30,6 @@ export default function Header() {
       </AnimatePresence>
     </header>
   );
-}
+});
+
+export default Header;
